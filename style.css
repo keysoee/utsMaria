@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbf2; /* Krem sangat terang */
+    box-sizing: border-box; /* Menghindari layout overflow */
+}
+
+header {
+    background-color: #ff6f61; /* Merah jambu cerah */
+    color: #fff3e3; /* Putih lembut */
+    padding: 5px 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    width: 100%; /* Memastikan header mengambil seluruh lebar layar */
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+nav {
+    background-color: #ffc107; /* Kuning cerah */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    width: 100%; /* Memastikan nav mengambil seluruh lebar pada layout responsif */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Hilangkan margin default pada list */
+}
+
+nav ul li {
+    margin: 25px 0;
+}
+
+nav ul li a {
+    color: #ff6f61; /* Merah jambu cerah */
+    text-decoration: none;
+    padding: 6px 30px;
+    border-radius: 5px;
+    background-color: #fffbf2; /* Krem sangat terang */
+    transition: background-color 0.3s, color 0.3s;
+    display: block; /* Buat link mengambil seluruh ruang */
+}
+
+nav ul li a:hover {
+    background-color: #ff6f61; /* Merah jambu cerah */
+    color: #fff; /* Putih */
+}
+
+.main-content {
+    display: flex;
+    height: calc(100vh - 120px); /* Menghitung tinggi konten utama */
+    overflow: hidden; /* Menghindari overflow vertikal */
+}
+
+section {
+    flex: 2;
+    padding: 20px;
+    background-color: #ffffff; /* Putih bersih */
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box; /* Menghindari overflow konten */
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffeb3b; /* Kuning lembut */
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box; /* Menghindari overflow konten */
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff6f61; /* Merah jambu cerah */
+    color: #fff3e3; /* Putih lembut */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-sizing: border-box; /* Menghindari overflow konten */
+}
+
+.footer-left, .footer-center, .footer-right {
+    text-align: left;
+}
+
+.footer-left p, .footer-center p, .footer-right p {
+    margin: 0;
+}
+
+.footer-left a, .footer-center a, .footer-right a {
+    color: #fff3e3; /* Putih lembut */
+    text-decoration: none;
+}
+
+.footer-left a:hover, .footer-center a:hover, .footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-center {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-right {
+    text-align: right;
+    margin-right: 35px;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Layout for Desktop */
+@media (min-width: 1025px) {
+    nav {
+        width: 25%;
+        float: left;
+    }
+
+    section {
+        width: 50%;
+    }
+
+    aside {
+        width: 25%;
+    }
+
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+/* Layout for Tablet Landscape */
+@media (min-width: 768px) and (orientation: landscape) {
+    nav {
+        width: 25%;
+    }
+
+    section {
+        width: 75%;
+    }
+
+    aside {
+        display: block;
+        padding: 20px;
+        background-color: #ffeb3b; /* Kuning lembut */
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+/* Layout for Tablet Portrait */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+    nav {
+        width: 100%;
+        float: none;
+        height: auto;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+}
+
+/* Layout for Smartphone */
+@media (max-width: 599px) {
+    header {
+        padding: 15px 0;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    nav, section, aside {
+        width: 100%;
+        height: auto;
+    }
+
+    section, aside {
+        padding: 10px;
+    }
+}

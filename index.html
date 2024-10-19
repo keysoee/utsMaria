@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <met name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="itsme.jpg" alt="Logo" id="logo">
+        <h1>Profil Mahasiswa</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('biodata')">Biodata</a></li>
+            <li><a href="#" onclick="showSection('pendidikan')">Pendidikan</a></li>
+            <li><a href="#" onclick="showSection('pengalaman')">Pengalaman</a></li>
+            <li><a href="#" onclick="showSection('keahlian')">Keahlian</a></li>
+            <li><a href="#" onclick="showSection('publikasi')">Publikasi</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section id="content">
+            <div id="biodata" class="section-content">
+                <h3>Biodata</h3>
+                <p>NIM  : 2023081046</p>
+                <p>Nama : Maria Rachel Kesya Makarena</p>
+                <p>Tempat Lahir : Kota Depok</p>
+                <p>Tanggal Lahir : 31 Maret 2003</p>
+                <p>Golongan Darah : A </p>
+                <P> Zodiak : Taurus </P>
+            </div>
+            
+            <div id="pendidikan" class="section-content" style="display:none;">
+                <h1>Pendidikan</h1>
+                <p>S1 Sistem Informasi - Universitas Pembangunan Jaya (2023 - Sekarang)</p>
+                <p>SMK STRADA 1 - Jakarta pusat (2019-2022)</p>
+                <p>SMP ST.Vincentius - Jakarta Timur (2016-2019)</p>
+                <p>SDN Pancoran mas 6 - Depok</p>
+                <p>TK Bunga Bangsa - Depok </p>
+                
+            </div>
+            <div id="pengalaman" class="section-content" style="display:none;">
+                <h2>Pengalaman Bekerja </h2>
+                <p>PT. Glory Offset Press</p>
+                <h3>Admin Support Keuangan & Purchasing</h3>
+                <ul>
+                    <li>Membeli kebutuhan produksi (Bahan - Perlengkapan).</li>
+                    <li>Memastikan barang yang dikirim sesuai pesanan.</li>
+                    <li>Melakukan stok opname barang produksi setiap minggu.</li>
+                    <li>Menginput data ke dalam sistem Accurate.</li>
+                    <li>Melakukan laporan stok opname barang setiap bulan.</li>
+                </ul>
+                
+
+            
+            </div>
+            <div id="keahlian" class="section-content" style="display:none;">
+                <h1>Keterampilan & kompetensi</h1>
+                <ul>
+                    <p>- Microsoft Office ( Microsoft Word, Microsoft Excel, Power Point)</p> 
+                    <P>- Sistem Aplikasi Akuntansi ( Accurate, MYOB)</P>
+                    <P>- Bahasa ( Indonesia - Mahir, Inggris - Menengah)</P>
+                    <P>- Kemampuan ( Komunikasi, Team Work, Detail )</P>
+                    <P>- Pembuatan website (Html, css, nodejs, laravel, dom, PhP)</P>
+                </ul>
+            </div>
+            <div id="publikasi" class="section-content" style="display:none;">
+                <h2>Publikasi</h2>
+                <ul>
+                    <li>Penulisan artikel Program Digitalisasi PAUD, UPJ Raih Hibah Kemdikbudristek.</li>
+                    <li>Penulisan artikel dengan judul "Begini Cara Mengasah Keterampilan Digital Para Guru-guru PAUD."</li>
+                    <li>Penulisan artikel dengan judul "BUKAN HANYA ANDAL TEKNOLOGI MAHASISWA SISTEM INFORMASI BERPELUANG BESAR DI DUNIA BISNIS?"</li>
+                </ul>
+            </div>
+        </section>
+
+        <aside>
+            <h1>Hobi</h1>
+            <ul>
+                <li>Makan & Tidur</li> </ul>
+            <h2>Pencapaian</h2>
+            <ul>
+                <li>Sertifikat Accurate (A+)</li>
+                <li>Sertifikat Kompetensi Akuntansi (BNSP)</li>
+                <li>Sertifikat Lulusan 10 besar terbaik</li>
+                <li>Juara Kelas
+                    <ul>
+                        <li>X ranking 3</li>
+                        <li>XI ranking 2</li>
+                        <li>XII ranking 2</li>
+                        <br>
+                        <br>
+                    </ul>
+                </li>
+            </ul>
+            
+          
+        </aside>
+        
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>Linkedln : <a href="https://www.linkedin.com/in/maria-rachel-kesya-makarena-b43979287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Maria Rachel Kesya Makarena</a></p>
+            <p>Email : <a href="mailto:mariarachel3008@gmail.com">mariarachel3008@gmail.com</a></p>
+        </div>
+        <div class="footer-center">
+            <p>© 2024 Maria Rachel Kesya Makarena - All Rights Reserved</p>
+        </div>
+        <div class="footer-right">
+            <p><strong>Profile kesya</strong></p>
+            <p>Welcome to my creative space!</p>
+        </div>
+    </footer>    
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
